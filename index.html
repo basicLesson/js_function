@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="age(1999)">Naing Ko</button>
+    <button onclick="age(1994)">Hein Soe</button>
+
+    <div id="content"></div>
+
+    <script>
+        function dom(text) {// dom
+            document.getElementById('content').innerHTML = text
+        }
+
+        function theSum(num1, num2) {
+            var result = num1 + num2;
+            dom(result)
+        }
+        
+        function age(year) {
+            var now = new Date();
+            var ageNumber = now.getFullYear() - year
+            dom(ageNumber)
+        }
+    </script>
+
+</body>
+
+</html>
